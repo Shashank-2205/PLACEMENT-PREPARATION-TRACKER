@@ -95,3 +95,5 @@ INSERT INTO users (name,email,password,role) VALUES ('John Doe','john@example.co
 - Login redirect issues: ensure localStorage has `user` with `role`, and frontend points to correct backend URL.
 - Forgot password: if email not received, use the temp password shown in the response; configure EMAIL_* for real emails.
 - DB errors: verify MySQL is running and credentials/DB name match `server/config/db.js` or env vars.
+
+Test commit by collaborator
