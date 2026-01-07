@@ -1,0 +1,10 @@
+{
+  "name": "placement-prep-tracker",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd server && node index.js\" \"cd client && npm run dev\""
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.12"
+  }
+}

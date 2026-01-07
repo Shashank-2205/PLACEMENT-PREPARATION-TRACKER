@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Login</title>
+</head>
+<body>
+  <h2>Test Login API</h2>
+
+  <input id="email" placeholder="Email"><br><br>
+  <input id="password" type="password" placeholder="Password"><br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p id="result"></p>
+
+  <script>
+    function login() {
+      fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.user) {
+          document.getElementById("result").innerText =
+            "Login successful. Welcome " + data.user.name;
+        } else {
+          document.getElementById("result").innerText =
+            data.message || "Login failed";
+        }
+      })
+      .catch(() => {
+        document.getElementById("result").innerText = "Error occurred";
+      });
+    }
+  </script>
+</body>
+</html>

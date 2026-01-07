@@ -1,0 +1,23 @@
+{
+  "name": "placement-prep-tracker-server",
+  "version": "1.0.0",
+  "description": "Backend server for Placement Preparation Tracker",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon index.js",
+    "prod": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
